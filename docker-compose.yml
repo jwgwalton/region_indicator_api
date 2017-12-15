@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  database:
+    container_name: indicator-db
+    image: postgres:9.6
+    environment:
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "6432:5432"
+
+  indicator-api:
+    container_name: indicator-api
+    build: ./
+    restart: always
+    depends_on:
+      - database
+    ports:
+      - "8081:8081"

@@ -1,0 +1,21 @@
+[[source]]
+
+verify_ssl = true
+name = "pypi"
+url = "https://pypi.python.org/simple"
+
+
+[requires]
+
+python_version = "3.6"
+
+
+[packages]
+flask = "==0.12.2"
+flask-sqlalchemy = "==2.3"
+"psycopg2" = "==2.7.1"
+flask-restless = "==1.0.0b1"
+
+
+
+[dev-packages]
